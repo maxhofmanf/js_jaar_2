@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>De dagen van de week zijn:</h2>
+    <p id="normal"></p>
+    <h2>
+        De werk dagen zijn
+    </h2>
+    <p id="werkdagen"></p>
+    <h2>De weekend dagen zijn</h2>
+    <p id="weekend"></p>
+    <h2>Alle dagen van de week in omgekeerde volgorde zijn:</h2>
+    <p id="reverse"></p>
+    <h2>De werkdagen in omgekeerde volgorde zijn:</h2>
+    <p id="reverse_workdays"></p>
+    <h2>De weekenddagen in omgekeerde volgorde zijn:</h2>
+    <p id="reverse_weekend"></p>
+    <script>
+        const days = [" maandag ", " dinsdag ", " woensdag ", " donderdag ", " vrijdag ", " zaterdag ", " zondag "];
+
+        document.getElementById("normal").innerHTML = days;
+
+        // const workdays = days.slice(0, 5);
+        document.getElementById("werkdagen").innerHTML = days.slice(0, 5).toString();
+
+        // const weekend = days.reverse().slice(0, -5);
+        document.getElementById("weekend").innerHTML = days.reverse().slice(0, -5).reverse().toString();
+
+        document.getElementById("reverse").innerHTML = days;
+
+        document.getElementById("reverse_workdays").innerHTML = days.reverse().slice(0, 5).reverse().toString();
+
+        document.getElementById("reverse_weekend").innerHTML = days.reverse().slice(0, -5);
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const tafels = [2, 4, 6, 8];
+        function tafel_van() {
+            for (x = 0; x <= (tafels.length - 1); x++) {
+
+                document.write("dit is de tafel van : " + tafels[x] + "<br>");
+                for (y = 1; y <= 10; y++) {
+                    later = tafels[x] * y;
+                    document.write(later + '<br>');
+                }
+            }
+        }
+        tafel_van();
+    </script>
+</body>
+
+</html>

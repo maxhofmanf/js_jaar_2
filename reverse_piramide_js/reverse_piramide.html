@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Voer een getal in:</p>
+    <input type="text" name="begin" id="begin"><br>
+    <input type="button" onclick="piramide()" value="Submit">
+
+    <script>
+        function piramide() {
+            let begin = document.getElementById("begin").value;
+            result = [];
+            for (x = 1; x <= begin; x++) {
+                result[x] = x;
+            }
+            console.log(result)
+            for (x = begin; x >= 0; x--) {
+                result[x + 1] = []
+
+                document.write(result.toString().replaceAll(/,* */g, "") + "<br>");
+            }
+        }
+    </script>
+</body>
+
+</html>
