@@ -4,6 +4,7 @@ body.innerHTML += document.createElement = '<div id="panel">';
 
 let panel = document.getElementById("panel");
 
+body.style.background = 'grey';
 
 
 panel.style.background = 'white';
