@@ -1,10 +1,13 @@
 let body = document.getElementsByTagName("body")[0];
+body.style.maxWidth = '700px'
+body.style.margin = "b"
 const xbutton = [1, 7, 13, 19, 25, 29]
 
 
 let container = document.getElementById("container");
 container.style.background = "grey"
-container.style.width = "1000px";
+container.style.width = "625px";
+container.style.display = "center"
 let count = 0;
 function buttons() {
     for (y = 1; y <= 30; y++) {
