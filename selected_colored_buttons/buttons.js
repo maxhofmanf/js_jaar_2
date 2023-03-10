@@ -1,7 +1,6 @@
 let body = document.getElementsByTagName("body")[0];
 body.style.maxWidth = '700px'
 body.style.margin = "b"
-const xbutton = [1, 7, 13, 19, 25, 29]
 let color_array = ["blue", "white", "yellow"]
 
 let container = document.getElementById("container");
@@ -26,11 +25,11 @@ function buttons() {
         container.appendChild(button)
     }
 }
-console.log(color_array)
+
 
 function coloring(button, color_array) {
     let x = 0
-    console.log(x)
+
     if (button.style.background == "green") {
         button.style.background = color_array[0]
     } else if (button.style.background == color_array[color_array.length - 1]) {
@@ -42,13 +41,13 @@ function coloring(button, color_array) {
         while (x <= (color_array.length)) {
             if (button.style.background == color_array[x]) {
                 x++
-                console.log("inloop: " + x)
+
                 button.style.background = color_array[x]
                 break;
             }
             x++
         }
-        console.log(x)
+
 
     }
 }
