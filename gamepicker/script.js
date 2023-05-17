@@ -303,18 +303,7 @@ function show_dropdown() {
     dropdown.classList.toggle("show");
 }
 
-// window.onclick = function (event) {
-//     if (!event.target.matches('.dropbtn')) {
-//         var dropdown_child = document.getElementsByClassName("dropdown-content");
-//         var i;
-//         for (i = 0; i < dropdown_child.length; i++) {
-//             var openDropdown = dropdown_child[i];
-//             if (openDropdown.classList.contains('show')) {
-//                 openDropdown.classList.remove('show');
-//             }
-//         }
-//     }
-// }
+
 function filter(genre) {
     all_games = document.querySelectorAll('.game_container');
     game_container = document.querySelectorAll('.game_container');
@@ -374,12 +363,24 @@ function dis_shopping_cart(boughtgames) {
         pricePara.textContent = `Price: €${price.toFixed(2)}`;
         gameDiv.appendChild(pricePara);
 
-        totalprice += price; // Add price to the total price
+        const removeButton = document.createElement("button");
+        removeButton.textContent = "Remove";
+        removeButton.addEventListener("click", () => {
+            boughtgames.splice(boughtgames.indexOf(boughtgame), 1);
+            totalprice -= price;
+            boughtGamesDiv.removeChild(gameDiv);
+            totalpricePara.textContent = `Total Price: €${totalprice.toFixed(2)}`;
+            totalpriceDiv.appendChild(totalpricePara);
 
+            boughtGamesDiv.appendChild(totalpriceDiv);
+        });
+
+        gameDiv.appendChild(removeButton); // Append removeButton to gameDiv
+
+        totalprice += price;
         boughtGamesDiv.appendChild(gameDiv);
     }
 
-    // Create total price element and append it
     const totalpriceDiv = document.createElement("div");
     const totalpricePara = document.createElement("p");
     totalpricePara.textContent = `Total Price: €${totalprice.toFixed(2)}`;
